@@ -5,7 +5,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- HEADER SECTION -->
     <header class="hero-img">
+      <div id="hero-text">
+        <h1 id="hero-title">Crave, Order, Enjoy</h1>
+        <h3 id="hero-subtitle">Fresh pizza Delivered to your doorstep</h3>
+        <button class="cta">ORDER</button>
+      </div>
       <nav>
         <li>HOME</li>
         <li>FOODS</li>
@@ -15,23 +21,106 @@
       </nav>
     </header>
 
-    <section class="grid">
-      <figure>
-        <img class="menu-img mi-1" src="img/cheese-pizza.jpg" />
-        <figcaption>Cheese pizza</figcaption>
-      </figure>
-      <figure>
-        <img class="menu-img mi-2" src="img/margherita-pizza.jpg" />
-        <figcaption>Margherita pizzaa</figcaption>
-      </figure>
-      <figure>
-        <img class="menu-img mi-3" src="img/panner-tikka-pizza.jpg" />
-        <figcaption>Panner tikka pizza</figcaption>
-      </figure>
-      <figure>
-        <img class="menu-img mi-4" src="img/veg-pizza.jpg" />
-        <figcaption>Veg-pizza</figcaption>
-      </figure>
+    <!-- MENU -->
+    <section class="menu">
+      <div class="wrapper">
+        <h3>MENU</h3>
+        <div class="grid--2">
+          <figure>
+            <img class="menu-img mi-1" src="img/cheese-pizza.jpg" />
+            <figcaption>Cheese pizza</figcaption>
+          </figure>
+          <figure>
+            <img class="menu-img mi-2" src="img/margherita-pizza.jpg" />
+            <figcaption>Margherita pizzaa</figcaption>
+          </figure>
+          <figure>
+            <img class="menu-img mi-3" src="img/panner-tikka-pizza.jpg" />
+            <figcaption>Panner tikka pizza</figcaption>
+          </figure>
+          <figure>
+            <img class="menu-img mi-4" src="img/veg-pizza.jpg" />
+            <figcaption>Veg-pizza</figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
+
+    <!-- FORM -->
+    <section class="form">
+      <div class="wrapper">
+        <h3>SUBSCRIBE</h3>
+        <form>
+          <label for="name">Name : </label>
+          <input type="name" autocomplete="name" required />
+          <label for="email">Email :</label>
+          <input type="email" autocomplete="email" required />
+          <label for="phone-no">Phone no :</label>
+          <input type="phone" autocomplete="mobile" required />
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <aside class="about">
+      <div class="wrapper clearfix">
+        <h3>ABOUT</h3>
+        <embed
+          class="yt-about"
+          src="https://www.youtube.com/embed/Fbrg90LGSs8?si=2fTCDtZYKgakj-6A"
+          controls
+          autoplay
+          width="700"
+          height="350"
+        />
+
+        <details style="margin: 3rem 0">
+          <summary>Our branches</summary>
+          <ul>
+            <li>Velachery</li>
+            <li>Perungudi</li>
+            <li>Adyar</li>
+            <li>Tambaram</li>
+            <li>ECR</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Timing</summary>
+          <p>10.00 - 23.00</p>
+        </details>
+      </div>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrapper grid--2">
+        <ul class="sitemap grid--2" style="list-style-type: none">
+          <li>Home</li>
+          <li>Subscribe</li>
+          <li>Food</li>
+          <li>About</li>
+        </ul>
+        <ul class="social-media" style="list-style-type: none">
+          <li><ion-icon name="logo-instagram"></ion-icon></li>
+          <li><ion-icon name="logo-youtube"></ion-icon></li>
+          <li><ion-icon name="logo-twitter"></ion-icon></li>
+          <li><ion-icon name="logo-facebook"></ion-icon></li>
+        </ul>
+        <div class="copyright">
+          <p>&copy;2024.OrderNow, All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Ionicons script file -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
