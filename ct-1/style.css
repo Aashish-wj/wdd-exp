@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  background-color: rgba(187, 185, 185, 0.5);
+}
+
+.clearfix::after {
+  display: inline;
+  content: " ";
+  height: 0;
+  clear: both;
+}
+
+.wrapper {
+  padding-left: 2rem;
+}
+
+header {
+  display: flex;
+  gap: 20rem;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.logo-youtube {
+  color: red;
+  font-size: 4rem;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+ul {
+  width: 20rem;
+  height: 15rem;
+  display: grid;
+  grid-template-columns: span(3, 1fr);
+  row-gap: 1rem;
+}
+
+button {
+  border: none;
+  border-bottom: 1px solid black;
+  display: inline;
+  padding: 1rem;
+}
+
+aside {
+  display: float;
+  float: left;
+  height: 100vh;
+}
+
+.search {
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  font-size: 2rem;
+  width: 40rem;
+  height: 3rem;
+  border-radius: 10rem;
+  margin-bottom: 2rem;
+}
+
+.search-icon {
+  font-size: 3rem;
+  border: none;
+}
+
+article {
+  width: 120rem;
+  margin-left: 30rem;
+}
+
+section {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.section-info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.section-info p {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-top: 7rem;
+}
+
+.hide {
+  display: none;
+}
+
+.visible {
+  display: block;
+}

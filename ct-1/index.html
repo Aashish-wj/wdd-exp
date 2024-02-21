@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <link rel="stylesheet" href="style.css"
+  </head>
+  <body class="clearfix">
+    <header class="wrapper">
+      <div class="logo">
+        <ion-icon class="logo-youtube" name="logo-youtube"></ion-icon>
+        <h1>YouTube</h1>
+      </div>
+      <div>
+        <input
+          class="search"
+          type="search"
+          autocomplete
+          required
+          placeholder="japan song"
+        />
+        <button id="search-btn"><ion-icon class="search-icon" name="search-outline"></ion-icon></button>
+      </div>
+    </header>
+    <aside class="wrapper">
+      <nav>
+        <ul>
+          <button><ion-icon name="play-outline"></ion-icon> Watch later</button>
+          <button><ion-icon name="timer-outline"></ion-icon> History</button>
+          <button>
+            <ion-icon name="thumbs-up-outline"></ion-icon> Liked videos
+          </button>
+        </ul>
+      </nav>
+    </aside>
+    <article class="wrapper">
+      <section id="visible japan-song">
+        <embed
+          controls
+          autoplay
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/CLoR4RdVzYA?si=e8i1WqRPsasPG4pG"
+          allowfullscreen
+        />
+        <div class="visible section-info">
+          <h2>Indian Sons | First Trailer</h4>
+          <span>2.1M views . 4years ago</span>
+          <p>It is a documentary flim that traces the journey , ordeals & escape of innocent men</p>
+        </div>
+      </section>
+      <section id="pathaan-song">
+        <embed
+          conrtols
+          autplay
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/YxWlaYCA8MU?si=gTWRHilgeG9F2PLk"
+          allowfullscreen
+        />
+      </section>
+    </article>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
