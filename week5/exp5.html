@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="exp5.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-controller="loginController as ctrl">
+    <form
+      name="loginForm"
+      ng-submit="ctrl.submitForm(loginForm.$valid)"
+      novalidate
+    >
+      <div>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          ng-model="ctrl.user.name"
+          ng-minlength="3"
+          ng-maxlength="8"
+          required
+        />
+        <div
+          ng-messages="loginForm.name.$error"
+          ng-if="loginForm.name.$touched"
+        >
+          <p ng-message="required">Name is required</p>
+          <p ng-message="minlength">Name must be at least 3 characters</p>
+          <p ng-message="maxlength">Name cannot be longer than 8 characters</p>
+        </div>
+      </div>
+      <div>
+        <label for="username">Username</label>
+        <input
+          type="email"
+          id="username"
+          name="username"
+          ng-model="ctrl.user.username"
+          required
+        />
+        <div
+          ng-messages="loginForm.username.$error"
+          ng-if="loginForm.username.$touched"
+        >
+          <p ng-message="required">Username is required</p>
+          <p ng-message="email">Username must be a valid email</p>
+        </div>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          ng-model="ctrl.user.password"
+          ng-minlength="6"
+          required
+        />
+        <div
+          ng-messages="loginForm.password.$error"
+          ng-if="loginForm.password.$touched"
+        >
+          <p ng-message="required">Password is required</p>
+          <p ng-message="minlength">Password must be at least 6 characters</p>
+        </div>
+      </div>
+      <button type="submit" ng-disabled="loginForm.$invalid">Login</button>
+    </form>
+    <script>
+      angular.module("loginApp", []).controller("loginController", function () {
+        this.user = {
+          name: "",
+          username: "",
+          password: "",
+        };
+
+        this.submitForm = function (isValid) {
+          if (isValid) {
+            alert("Form submitted successfully");
+          } else {
+            alert("Please correct the errors in the form");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
