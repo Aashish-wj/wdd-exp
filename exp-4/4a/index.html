@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign in</title>
+  </head>
+  <body>
+    <article>
+      <form>
+        <label for="name">Name </label>
+        <input id="name" type="text" required placeholder="joe" />
+        <span id="name-error"></span>
+        <label for="password">Password </label>
+        <input id="password" type="password" required />
+        <span id="password-error"></span>
+        <label for="email">Email</label>
+        <input id="email" type="email" required placeholder="abc@gmail.com" />
+        <span id="email-error"></span>
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" required placeholder="99781 xxx43" />
+        <span id="phone-error"></span>
+        <input id="button" type="button" value="submit" />
+      </form>
+    </article>
+    <script src="script.js" />
+  </body>
+</html>
