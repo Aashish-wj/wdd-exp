@@ -1,5 +1,17 @@
-var app = angular.module("myapp", []);
-app.controller("myctrl", function ($scope) {
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function ($routeProvider) {
+  $routeProvider
+    .when("/login", {
+      templateUrl: "login/index.html",
+   
+    })
+    .when("/calculator", {
+      templateUrl: "calculator/index.html",
+      controller: "calCtrl",
+    });
+});
+
+app.controller("calCtrl", function ($scope) {
   $scope.calculate = function (op) {
     switch (op) {
       case "+":
@@ -17,3 +29,5 @@ app.controller("myctrl", function ($scope) {
     }
   };
 });
+
+
