@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA</title>
+    <style>
+      .nav {
+        width: inherit;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px 10px;
+        border: 2px solid #000000;
+        margin: 10px;
+      }
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #a67926;
+        font-size: 20px;
+      }
+      a:hover,
+      a:active {
+        text-decoration: none;
+        color: #ea9801;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="#!login">Login</a>
+      <a href="#!calculator">Calculator</a>
+    </div>
+    <div ng-view></div>
+
+    <!-- JS FILE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

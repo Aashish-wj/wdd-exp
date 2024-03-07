@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+      const app = angular.module("myapp", []);
+    </script>
+    <style>
+      .error {
+        display: inline-block;
+        color: #bd2727be;
+        height: 10px;
+        margin: 5px 0px 25px 0px;
+      }
+    </style>
+  </head>
+  <body ng-controller="myctrl">
+    <form name="myform" novalidate>
+      <!-- NAME -->
+      <label for="name">Name</label><br />
+      <input
+        type="text"
+        ng-model="name"
+        name="name"
+        pattern="[a-zA-Z]{3,8}"
+        required
+      /><br />
+      <span ng-show="myform.$submitted || myform.name.$dirty">
+        <span
+          class="error"
+          ng-show="myform.name.$error.pattern||myform.name.$error.required"
+          >Name should be string & b/w 3-8 characters</span
+        > </span
+      ><br />
+
+      <!-- EMAIL -->
+      <label for="email">Email</label><br />
+      <input
+        type="email"
+        ng-model="email"
+        name="email"
+        pattern="^\S+@\S+\.\S+$"
+        required="true"
+      /><br />
+      <span ng-show="myform.$submitted || myform.email.$dirty">
+        <span
+          class="error"
+          ng-show="myform.email.$error.pattern||myform.email.$error.required"
+          >Enter a valid email ID</span
+        >
+      </span>
+      <br />
+
+      <!-- PASSWORD -->
+      <label for="password">Password</label><br />
+      <input
+        type="password"
+        ng-model="password"
+        name="password"
+        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+}{|:;'/?>.<,])(?!.*\s).{6,13}$"
+        required="true"
+      /><br />
+      <span ng-show="myform.$submitted || myform.password.$dirty">
+        <span
+          class="error"
+          ng-show="myform.password.$error.pattern||myform.password.$error.required"
+          >Need password of length 6-13 with atleast one special char, alphabet
+          & num</span
+        >
+      </span>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- 
+Used to track user interaction & state of form controls.
+ng-untouched 
+ng-touched 
+ng-pristine
+ng-dirty 
+ng-valid
+ng-invalid 
+
+$error object is used to track validation errors
+-->

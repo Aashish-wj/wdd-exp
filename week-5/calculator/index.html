@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+      }
+      .calc-body {
+        width: 800px;
+        margin: 10px auto;
+        border: 1px solid #000000;
+      }
+
+      .row--col--2 {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .operations {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+
+      .op-1,
+      .op-2,
+      .op-3,
+      .op-4 {
+        flex: 1;
+        font-size: 20px;
+        background-color: #99e6ff;
+        border: 1px solid #000000;
+      }
+      .op-1:active,
+      .op-2:active,
+      .op-3:active,
+      .op-4:active {
+        background-color: #d6f5ff87;
+      }
+
+      input {
+        width: 99%;
+      }
+
+      .result {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body ng-app="myapp" ng-controller="myctrl">
+    <div class="row--col--2 calc-body">
+      <div>
+        <input type="number" required ng-model="num1" />
+        <input type="number" required ng-model="num2" />
+      </div>
+      <h1 class="result">Result: {{result}}</h1>
+      <div class="operations">
+        <input class="op-1" type="button" value="+" ng-click="calculate('+')" />
+        <input class="op-2" type="button" value="-" ng-click="calculate('-')" />
+        <input class="op-3" type="button" value="*" ng-click="calculate('*')" />
+        <input class="op-4" type="button" value="/" ng-click="calculate('/')" />
+      </div>
+    </div>
+  </body>
+</html>
